@@ -14,7 +14,7 @@ const StatsCard = ({ title, date, stat, color }: StatsCardProps) => {
         <span className="text-[10px] bg-white px-2 py-1 rounded-full text-greenAccent-400">
           {date}
         </span>
-        <MoreHorizIcon />
+        <MoreHorizIcon className="cursor-pointer" />
       </div>
       <h1 className="text-2xl font-semibold my-4">{stat}</h1>
       <h2 className="capitalize text-sm font-medium text-gray-500">{title}</h2>
