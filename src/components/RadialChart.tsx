@@ -32,7 +32,7 @@ const data = [
   },
 ];
 
-const CountChart = () => {
+const MyRadialChart = () => {
   return (
     <div className="bg-primary-600 rounded-xl h-full w-full p-4">
       {/* TITLE */}
@@ -67,17 +67,17 @@ const CountChart = () => {
       </div>
       {/* BOTTOM */}
       <div className="flex justify-center gap-16">
-        <div className="flex flex-col gap-1">
+        <div className="flex flex-col gap-1 items-center">
           <div className="w-5 h-5 rounded-full bg-greenAccent-400"></div>
           <h1 className="font-bold text-white">10</h1>
           <h2 className="text-xs text-primary-200">LOW</h2>
         </div>
-        <div className="flex flex-col gap-1">
+        <div className="flex flex-col gap-1 items-center">
           <div className="w-5 h-5 rounded-full bg-yellowAccent-400"></div>
           <h1 className="font-bold text-white">3</h1>
           <h2 className="text-xs text-primary-200">MEDIUM</h2>
         </div>
-        <div className="flex flex-col gap-1">
+        <div className="flex flex-col gap-1 items-center">
           <div className="w-5 h-5 rounded-full bg-redAccent-400"></div>
           <h1 className="font-bold text-white">1</h1>
           <h2 className="text-xs text-primary-200">HIGH</h2>
@@ -87,4 +87,4 @@ const CountChart = () => {
   );
 };
 
-export default CountChart;
+export default MyRadialChart;
