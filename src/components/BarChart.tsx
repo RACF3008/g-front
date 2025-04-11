@@ -1,4 +1,4 @@
-'use client';
+"use client";
 import {
   BarChart,
   Bar,
@@ -9,32 +9,32 @@ import {
   Tooltip,
   Legend,
   ResponsiveContainer,
-} from 'recharts';
-import MoreHorizIcon from '@mui/icons-material/MoreHoriz';
+} from "recharts";
+import MoreHorizIcon from "@mui/icons-material/MoreHoriz";
 
 const data = [
   {
-    name: 'Water Usage',
+    name: "Water Usage",
     prev: 60,
     now: 65,
   },
   {
-    name: 'Production',
+    name: "Production",
     prev: 62,
     now: 63,
   },
   {
-    name: 'Others',
+    name: "Others",
     prev: 65,
     now: 70,
   },
   {
-    name: 'Others',
+    name: "Others",
     prev: 63,
     now: 62,
   },
   {
-    name: 'Othersx',
+    name: "Othersx",
     prev: 60,
     now: 63,
   },
@@ -67,29 +67,35 @@ const MyBarChart = () => {
           <XAxis
             dataKey="name"
             axisLine={false}
-            tick={{ fill: '#ccd1d1' }}
+            tick={{ fill: "#ccd1d1" }}
             tickLine={false}
           />
           <YAxis axisLine={false} />
           <Tooltip
-            contentStyle={{ borderRadius: '10px', borderColor: 'lightgray' }}
+            contentStyle={{
+              color: "white",
+              background: "#334646",
+              borderRadius: "10px",
+              borderColor: "lightgray",
+            }}
+            cursor={false}
           />
           <Legend
             align="left"
             verticalAlign="top"
-            wrapperStyle={{ paddingTop: '20px', paddingBottom: '40px' }}
+            wrapperStyle={{ paddingTop: "20px", paddingBottom: "40px" }}
           />
           <Bar
             dataKey="now"
             fill="#15e585"
-            activeBar={<Rectangle fill="#00d2ff" stroke="#001818" />}
+            activeBar={<Rectangle stroke="#001818" />}
             legendType="circle"
             radius={[10, 10, 0, 0]}
           />
           <Bar
             dataKey="prev"
-            fill="#73efb6"
-            activeBar={<Rectangle fill="#66e4ff" stroke="#001818" />}
+            fill="#00d2ff"
+            activeBar={<Rectangle stroke="#001818" />}
             legendType="circle"
             radius={[10, 10, 0, 0]}
           />

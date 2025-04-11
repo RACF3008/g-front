@@ -1,7 +1,8 @@
-import StatsCard from '@/components/StatsCard';
-import MyBarChart from '@/components/BarChart';
-import MyRadialChart from '@/components/RadialChart';
-import MyLineChart from '@/components/LineChart';
+import StatsCard from "@/components/StatsCard";
+import MyBarChart from "@/components/BarChart";
+import MyRadialChart from "@/components/RadialChart";
+import MyLineChart from "@/components/LineChart";
+import MyCalendar from "@/components/Calendar";
 
 const AdminPage = () => {
   return (
@@ -33,7 +34,9 @@ const AdminPage = () => {
       </div>
 
       {/* RIGHT */}
-      <div className="w-full lg:w-1/3">R</div>
+      <div className="w-full lg:w-1/3 flex flex-col gap-8">
+        <MyCalendar />
+      </div>
     </div>
   );
 };

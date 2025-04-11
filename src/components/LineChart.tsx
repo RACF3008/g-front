@@ -1,4 +1,4 @@
-'use client';
+"use client";
 import {
   LineChart,
   Line,
@@ -8,50 +8,74 @@ import {
   Tooltip,
   Legend,
   ResponsiveContainer,
-} from 'recharts';
-import MoreHorizIcon from '@mui/icons-material/MoreHoriz';
+} from "recharts";
+import MoreHorizIcon from "@mui/icons-material/MoreHoriz";
 
 const data = [
   {
-    name: 'Page A',
-    uv: 4000,
+    name: "Jan",
+    now: 4000,
     pv: 2400,
     amt: 2400,
   },
   {
-    name: 'Page B',
-    uv: 3000,
-    pv: 1398,
+    name: "Feb",
+    now: 3000,
+    prev: 1398,
     amt: 2210,
   },
   {
-    name: 'Page C',
-    uv: 2000,
-    pv: 9800,
+    name: "Mar",
+    now: 2000,
+    prev: 9800,
     amt: 2290,
   },
   {
-    name: 'Page D',
-    uv: 2780,
-    pv: 3908,
+    name: "Apr",
+    now: 2780,
+    prev: 3908,
     amt: 2000,
   },
   {
-    name: 'Page E',
-    uv: 1890,
-    pv: 4800,
+    name: "May",
+    now: 1890,
+    prev: 4800,
     amt: 2181,
   },
   {
-    name: 'Page F',
-    uv: 2390,
-    pv: 3800,
+    name: "Jun",
+    now: 2390,
+    prev: 3800,
     amt: 2500,
   },
   {
-    name: 'Page G',
-    uv: 3490,
-    pv: 4300,
+    name: "Aug",
+    now: 3490,
+    prev: 4300,
+    amt: 2100,
+  },
+  {
+    name: "Sep",
+    now: 3490,
+    prev: 4300,
+    amt: 2100,
+  },
+  {
+    name: "Oct",
+    now: 3490,
+    prev: 4300,
+    amt: 2100,
+  },
+  {
+    name: "Nov",
+    now: 3490,
+    prev: 4300,
+    amt: 2100,
+  },
+  {
+    name: "Dec",
+    now: 3490,
+    prev: 4300,
     amt: 2100,
   },
 ];
@@ -64,7 +88,7 @@ const MyLineChart = () => {
         <h1 className="font-semibold text-primary-100 text-lg">Other Stats</h1>
         <MoreHorizIcon className="text-primary-100 cursor-pointer" />
       </div>
-      <ResponsiveContainer width="100%" height="100%">
+      <ResponsiveContainer width="100%" height="90%">
         <LineChart
           width={500}
           height={300}
@@ -77,17 +101,44 @@ const MyLineChart = () => {
           }}
         >
           <CartesianGrid strokeDasharray="3 3" />
-          <XAxis dataKey="name" />
-          <YAxis />
-          <Tooltip />
-          <Legend />
+          <XAxis
+            dataKey="name"
+            axisLine={false}
+            tick={{ fill: "#ccd1d1" }}
+            tickLine={false}
+            tickMargin={10}
+          />
+          <YAxis
+            axisLine={false}
+            tick={{ fill: "#ccd1d1" }}
+            tickLine={false}
+            tickMargin={15}
+          />
+          <Tooltip
+            contentStyle={{
+              color: "white",
+              background: "#334646",
+              borderRadius: "10px",
+              borderColor: "lightgray",
+            }}
+          />
+          <Legend
+            align="center"
+            verticalAlign="top"
+            wrapperStyle={{ paddingTop: "10px", paddingBottom: "20px" }}
+          />
           <Line
             type="monotone"
-            dataKey="pv"
-            stroke="#8884d8"
-            activeDot={{ r: 8 }}
+            dataKey="now"
+            stroke="#15e585"
+            strokeWidth={3}
           />
-          <Line type="monotone" dataKey="uv" stroke="#82ca9d" />
+          <Line
+            type="monotone"
+            dataKey="prev"
+            stroke="#00d2ff"
+            strokeWidth={3}
+          />
         </LineChart>
       </ResponsiveContainer>
     </div>
