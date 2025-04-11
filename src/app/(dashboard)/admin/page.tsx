@@ -1,6 +1,7 @@
 import StatsCard from '@/components/StatsCard';
 import MyBarChart from '@/components/BarChart';
 import MyRadialChart from '@/components/RadialChart';
+import MyLineChart from '@/components/LineChart';
 
 const AdminPage = () => {
   return (
@@ -26,7 +27,9 @@ const AdminPage = () => {
           </div>
         </div>
         {/* BOTTOM CHARTS */}
-        <div className="bg-primary-600 flex flex-col">R</div>
+        <div className="w-full h-[500px]">
+          <MyLineChart />
+        </div>
       </div>
 
       {/* RIGHT */}

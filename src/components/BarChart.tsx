@@ -61,7 +61,7 @@ const MyBarChart = () => {
             left: 20,
             bottom: 5,
           }}
-          barSize={20}
+          barSize={16}
         >
           <CartesianGrid strokeDasharray="3 3" vertical={false} stroke="#ddd" />
           <XAxis
