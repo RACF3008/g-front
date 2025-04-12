@@ -1,26 +1,70 @@
-import Link from "next/link";
-import HomeFilledIcon from "@mui/icons-material/HomeFilled";
-import HiveIcon from "@mui/icons-material/Hive";
-import AssignmentIcon from "@mui/icons-material/Assignment";
-import PersonIcon from "@mui/icons-material/Person";
-import SettingsIcon from "@mui/icons-material/Settings";
-import LogoutIcon from "@mui/icons-material/Logout";
+import Link from 'next/link';
+import HomeFilledIcon from '@mui/icons-material/HomeFilled';
+import HiveIcon from '@mui/icons-material/Hive';
+import AssignmentIcon from '@mui/icons-material/Assignment';
+import PersonIcon from '@mui/icons-material/Person';
+import SettingsIcon from '@mui/icons-material/Settings';
+import AttachMoneyIcon from '@mui/icons-material/AttachMoney';
+import TrendingUpIcon from '@mui/icons-material/TrendingUp';
+import LogoutIcon from '@mui/icons-material/Logout';
 
 const menuItems = [
   {
-    title: "MENU",
+    title: 'MENU',
     items: [
-      { label: "Home", href: "/", icon: <HomeFilledIcon /> },
-      { label: "Hives", href: "/hives", icon: <HiveIcon /> },
-      { label: "Tasks", href: "/tasks", icon: <AssignmentIcon /> },
+      {
+        label: 'Home',
+        href: '/',
+        icon: <HomeFilledIcon />,
+        visible: ['admin', 'operator', 'viewer'],
+      },
+      {
+        label: 'Productivity',
+        href: '/',
+        icon: <TrendingUpIcon />,
+        visible: ['admin'],
+      },
+      {
+        label: 'Fincance',
+        href: '/',
+        icon: <AttachMoneyIcon />,
+        visible: ['admin'],
+      },
+      {
+        label: 'Hives',
+        href: '/hives',
+        icon: <HiveIcon />,
+        visible: ['admin', 'operator', 'viewer'],
+      },
+      {
+        label: 'Tasks',
+        href: '/tasks',
+        icon: <AssignmentIcon />,
+        visible: ['admin', 'operator'],
+      },
     ],
   },
   {
-    title: "OTHERS",
+    title: 'OTHERS',
     items: [
-      { label: "Profile", href: "/profile", icon: <PersonIcon /> },
-      { label: "Settings", href: "/settings", icon: <SettingsIcon /> },
-      { label: "Logout", href: "/logout", icon: <LogoutIcon /> },
+      {
+        label: 'Profile',
+        href: '/profile',
+        icon: <PersonIcon />,
+        visible: ['admin', 'operator'],
+      },
+      {
+        label: 'Settings',
+        href: '/settings',
+        icon: <SettingsIcon />,
+        visible: ['admin', 'operator'],
+      },
+      {
+        label: 'Logout',
+        href: '/logout',
+        icon: <LogoutIcon />,
+        visible: ['admin', 'operator', 'viewer'],
+      },
     ],
   },
 ];
