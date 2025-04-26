@@ -1,9 +1,9 @@
-import Menu from "@/components/Menu";
-import Navbar from "@/components/Navbar";
-import Image from "next/image";
-import Link from "next/link";
+import Menu from '@/components/Menu';
+import Navbar from '@/components/Navbar';
+import Image from 'next/image';
+import Link from 'next/link';
 
-const role = "admin";
+const role = 'admin';
 
 export default function DashboardLayout({
   children,
@@ -14,7 +14,10 @@ export default function DashboardLayout({
     <div className="h-screen flex">
       {/* LEFT */}
       <div className="w-[14%] md:w-[10%] lg:w-[19%] xl:w-[14%] p-4 bg-primary-600">
-        <Link href="/" className="flex items-center justify-start gap-1">
+        <Link
+          href="/"
+          className="flex items-center justify-center lg:justify-start gap-1"
+        >
           <Image src="/logo.png" alt="logo" width={48} height={48} />
           <span className="hidden lg:block text-white font-bold text-lg">
             GreenHive

@@ -1,22 +1,45 @@
-import Link from "next/link";
-import HomeFilledIcon from "@mui/icons-material/HomeFilled";
-import HiveIcon from "@mui/icons-material/Hive";
-import AssignmentIcon from "@mui/icons-material/Assignment";
-import PersonIcon from "@mui/icons-material/Person";
-import SettingsIcon from "@mui/icons-material/Settings";
-import AttachMoneyIcon from "@mui/icons-material/AttachMoney";
-import TrendingUpIcon from "@mui/icons-material/TrendingUp";
-import LogoutIcon from "@mui/icons-material/Logout";
+import Link from 'next/link';
+import HomeFilledIcon from '@mui/icons-material/HomeFilled';
+import HiveIcon from '@mui/icons-material/Hive';
+import AssignmentIcon from '@mui/icons-material/Assignment';
+import PersonIcon from '@mui/icons-material/Person';
+import SettingsIcon from '@mui/icons-material/Settings';
+import AttachMoneyIcon from '@mui/icons-material/AttachMoney';
+import TrendingUpIcon from '@mui/icons-material/TrendingUp';
+import LogoutIcon from '@mui/icons-material/Logout';
+import { faSeedling } from '@fortawesome/free-solid-svg-icons';
+
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const menuItems = [
   {
-    title: "MENU",
+    title: 'MENU',
     items: [
       {
-        label: "Home",
-        href: "/",
+        label: 'Home',
+        href: '/',
         icon: <HomeFilledIcon />,
-        visible: ["admin", "operator", "viewer"],
+        visible: ['admin', 'operator', 'viewer'],
+      },
+      // {
+      //   label: 'Hives',
+      //   href: '/list/hives',
+      //   icon: (
+      //     <span className="h-6 w-6">
+      //       <HiveIcon />
+      //     </span>
+      //   ),
+      //   visible: ['super-admin', 'admin', 'operator', 'viewer'],
+      // },
+      {
+        label: 'Devices',
+        href: '/devices/list',
+        icon: (
+          <span className="h-6 w-6">
+            <FontAwesomeIcon icon={faSeedling} />
+          </span>
+        ),
+        visible: ['super-admin', 'admin', 'operator', 'viewer'],
       },
       // {
       //   label: 'Productivity',
@@ -30,12 +53,6 @@ const menuItems = [
       //   icon: <AttachMoneyIcon />,
       //   visible: ['admin'],
       // },
-      {
-        label: "Hives",
-        href: "/hives",
-        icon: <HiveIcon />,
-        visible: ["admin", "operator", "viewer"],
-      },
       // {
       //   label: 'Tasks',
       //   href: '/tasks',
@@ -45,7 +62,7 @@ const menuItems = [
     ],
   },
   {
-    title: "OTHERS",
+    title: 'OTHERS',
     items: [
       // {
       //   label: 'Profile',
@@ -60,10 +77,10 @@ const menuItems = [
       //   visible: ['admin', 'operator'],
       // },
       {
-        label: "Logout",
-        href: "/logout",
+        label: 'Logout',
+        href: '/logout',
         icon: <LogoutIcon />,
-        visible: ["admin", "operator", "viewer"],
+        visible: ['admin', 'operator', 'viewer'],
       },
     ],
   },
